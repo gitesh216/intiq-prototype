@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: #0f172a;
+    background: #f4f6fa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-width: 320px;
+}
+button,
+input,
+select {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Manrope", "DM Sans", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 99px;
+}
+@layer components {
+    .surface-heavy {
+        border-radius: 1rem;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        background-color: #ffffff;
+        box-shadow: 0 12px 36px rgba(15, 23, 42, 0.045);
+    }
+    .surface-dark {
+        border-radius: 1rem;
+        background-color: #0a1020;
+        box-shadow: 0 18px 50px rgba(2, 6, 23, 0.22);
+    }
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 0.75rem;
+        background-color: #1769ff;
+        padding: 0.625rem 1rem;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: #ffffff;
+        box-shadow: 0 6px 18px rgba(23, 105, 255, 0.18);
+        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-primary:hover {
+        background-color: #0f5de8;
+    }
+    .btn-primary:active {
+        transform: scale(0.985);
+    }
+    .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 0.75rem;
+        border: 1px solid #e2e8f0;
+        background-color: #ffffff;
+        padding: 0.625rem 1rem;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: #334155;
+        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-secondary:hover {
+        background-color: #f8fafc;
+    }
+    .btn-secondary:active {
+        transform: scale(0.985);
+    }
+    .input {
+        width: 100%;
+        border-radius: 0.75rem;
+        border: 1px solid #e2e8f0;
+        background-color: #ffffff;
+        padding: 0.75rem 0.875rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .input:focus {
+        border-color: #1769ff;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    }
+    .eyebrow {
+        font-size: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: #94a3b8;
+    }
+    .icon-btn {
+        position: relative;
+        display: flex;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+        border: 1px solid #e2e8f0;
+        background-color: #ffffff;
+        color: #64748b;
+        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .icon-btn:hover {
+        background-color: #f8fafc;
+    }
+    .status-pill {
+        display: inline-flex;
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 9px;
+        font-weight: 900;
+    }
+    .pill-green {
+        background-color: #ecfdf5;
+        color: #047857;
+    }
+    .pill-amber {
+        background-color: #fffbeb;
+        color: #b45309;
+    }
+    .pill-red {
+        background-color: #fef2f2;
+        color: #b91c1c;
+    }
+    .pill-slate {
+        background-color: #f1f5f9;
+        color: #475569;
+    }
+}
+.intiq-mark {
+    display: flex;
+    height: 34px;
+    width: 34px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #3b82f6, #1d4ed8);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+.intiq-mark.dark {
+    box-shadow: none;
+}
+.rank {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #f1f5f9;
+    font-size: 10px;
+    font-weight: 900;
+    color: #64748b;
+}
+.toggle {
+    width: 40px;
+    height: 22px;
+    border-radius: 999px;
+    background: #cbd5e1;
+    padding: 2px;
+}
+.toggle.on {
+    background: #0f172a;
+}
+.toggle span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #fff;
+    transition: transform 0.2s;
+}
+.toggle.on span {
+    transform: translateX(18px);
+}
